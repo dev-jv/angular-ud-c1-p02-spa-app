@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { APP_ROUTING } from './app.routes';
 
+import { HeroesService } from './services/heroes.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -21,8 +22,10 @@ import { HeroesComponent } from './components/heroes/heroes.component';
   imports: [
     BrowserModule,
     APP_ROUTING
+   ],
+  providers: [
+    HeroesService
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
