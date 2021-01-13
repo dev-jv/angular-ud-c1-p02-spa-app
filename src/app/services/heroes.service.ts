@@ -67,7 +67,7 @@ export class HeroesService {
     return this.heroes[idx];
   }
 
-  buscarHeroes(termino: string): any {
+  buscarHeroes(termino: string): Heroe[] {
     const heroesArr: Heroe[] = [];
     termino = termino.toLowerCase();
     for (const heroe of this.heroes) {
@@ -75,8 +75,8 @@ export class HeroesService {
       if ( nombre.indexOf(termino) >= 0 ) {
         heroesArr.push(heroe);
       }
-      return heroesArr;
     }
+    return heroesArr;
   }
 }
 

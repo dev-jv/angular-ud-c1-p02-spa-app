@@ -1,0 +1,24 @@
+<h1>Búsqueda ... <small>"{{termino}}"</small></h1>
+<hr>
+<div>
+  <div class="container" *ngIf="!heroes || heroes.length === 0">
+    <div class="row justify-content-center">
+      <img *ngIf="termino.length>4" src="assets/img/marvel.png" [alt]="">
+      <img *ngIf="termino.length<=4" src="assets/img/dc.png" [alt]="">
+    </div>
+    <div class="row justify-content-center">
+      <h1 class="font-weight-light">No hubo coincidencias, vuelva a intentarlo.</h1>
+    </div>
+  </div>
+  <div class="card-columns">
+    <div class="card animated fadeIn fast" *ngFor="let heroe of heroes">
+      <img [src]="heroe.img" class="card-img-top" [alt]="heroe.img">
+      <div class="card-body">
+        <h5 class="card-title">{{heroe.nombre}}</h5>
+        <p class="card-text">{{heroe.bio}}</p>
+        <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+        <button type="button" class="btn btn-outline-primary btn-block">Ver más..</button>
+      </div>
+    </div>
+  </div>
+</div>

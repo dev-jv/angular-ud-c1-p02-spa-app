@@ -13,6 +13,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 
 import { FormsModule} from '@angular/forms';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule} from '@angular/forms';
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    HeroeComponent
+    HeroeComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
