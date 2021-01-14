@@ -22,7 +22,6 @@ export class BuscadorComponent implements OnInit {
         console.log(this.heroes);
         this.termino = params[`term`];
         console.log(this.termino);
-      });
-    }
+    });
   }
-
+}
