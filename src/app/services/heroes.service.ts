@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {findIndex} from 'rxjs/operators';
 
 @Injectable()
 export class HeroesService {
@@ -60,17 +61,23 @@ export class HeroesService {
   }
 
   getHeroes(): Heroe[]{
+    for (let i = 0; i < this.heroes.length; i++) {
+      this.heroes[i].idx = i;
+    }
     return this.heroes;
   }
 
-  getHeroe(idx: number): any{
-    return this.heroes[idx];
+  getHeroe(moon: number): any{
+    return this.heroes[moon];
   }
 
   buscarHeroes(termino: string): Heroe[] {
     const heroesArr: Heroe[] = [];
     termino = termino.toLowerCase();
-    for (const heroe of this.heroes) {
+    for (let i = 0; i < this.heroes.length; i++) {
+      let heroe: any = {};
+      this.heroes[i].idx = i;
+      heroe = this.heroes[i];
       const nombre = heroe.nombre.toLowerCase();
       if ( nombre.indexOf(termino) >= 0 ) {
         heroesArr.push(heroe);
@@ -86,4 +93,5 @@ export interface Heroe {
   img: string;
   aparicion: string;
   casa: string;
+  idx?: number;
 }

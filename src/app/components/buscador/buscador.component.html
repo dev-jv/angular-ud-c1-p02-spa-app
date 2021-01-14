@@ -20,6 +20,6 @@
 <!--        <button type="button" class="btn btn-outline-primary btn-block">Ver más..</button>-->
 <!--      </div>-->
 <!--    </div>-->
-    <app-heroe-tarjeta (heroeSeleccionado)="viewHero( $event )" [heroe]="hero" [index]="i" *ngFor="let hero of heroes, let i = index"></app-heroe-tarjeta>
+    <app-heroe-tarjeta (heroeSeleccionado)="viewHero( $event )" [heroe]="hero" [index]="hero.idx" *ngFor="let hero of heroes"></app-heroe-tarjeta>
   </div>
 </div>

@@ -2,7 +2,7 @@
   <img [src]="heroe.img" class="card-img-top" [alt]="heroe.img">
   <div class="card-body">
     <h5 class="card-title">{{heroe.nombre}}</h5>
-    <p class="card-text">{{heroe.bio}}</p>
+    <p class="card-text">{{heroe.bio| slice:0:75}} ...</p>
     <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
     <!--      <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Ver más...</a>-->
     <button (click)="viewHero()" type="button" class="btn btn-outline-primary btn-block">Ver más..</button>
