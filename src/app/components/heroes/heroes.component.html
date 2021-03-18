@@ -1,18 +1,18 @@
-<h1>Heroes <small>Marvel y DC</small></h1>
+<h1>Heroes <small>Marvel and DC</small></h1>
 <hr>
 <div class="card-columns">
-  <app-heroe-tarjeta (heroeSeleccionado)="viewHero( $event )" [heroe]="hero" [index]="hero.idx" *ngFor="let hero of heroes"></app-heroe-tarjeta>
+  <app-hero-card (selectedHero)="viewHero( $event )" [hero]="hero" [index]="hero.idx" *ngFor="let hero of heroes"></app-hero-card>
 </div>
 
 <!--<div class="card-columns">-->
-<!--  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes, let i = index">-->
-<!--    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.img">-->
+<!--  <div class="card animated fadeIn fast" *ngFor="let hero of heroes, let i = index">-->
+<!--    <img [src]="hero.img" class="card-img-top" [alt]="hero.img">-->
 <!--    <div class="card-body">-->
-<!--      <h5 class="card-title">{{heroe.nombre}}</h5>-->
-<!--      <p class="card-text">{{heroe.bio}}</p>-->
-<!--      <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>-->
-<!--  &lt;!&ndash;      <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Ver más...</a>&ndash;&gt;-->
-<!--      <button (click)="viewHero(i)" type="button" class="btn btn-outline-primary btn-block">Ver más..</button>-->
+<!--      <h5 class="card-title">{{hero.name}}</h5>-->
+<!--      <p class="card-text">{{hero.biog}}</p>-->
+<!--      <p class="card-text"><small class="text-muted">{{hero.add}}</small></p>-->
+<!--  &lt;!&ndash;      <a [routerLink]="['/hero',i]" class="btn btn-outline-primary btn-block">See more... </a>&ndash;&gt;-->
+<!--      <button (click)="viewHero(i)" type="button" class="btn btn-outline-primary btn-block">See more... </button>-->
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->

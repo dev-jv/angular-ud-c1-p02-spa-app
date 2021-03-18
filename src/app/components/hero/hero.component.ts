@@ -5,17 +5,17 @@ import { HeroesService } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-heroe',
-  templateUrl: './heroe.component.html'
+  templateUrl: './hero.component.html'
 })
-export class HeroeComponent {
+export class HeroComponent {
 
-  heroe: any = {};
+  hero: any = {};
 
   constructor( private activatedRoute: ActivatedRoute,
                private heroesService: HeroesService){
       this.activatedRoute.params.subscribe(params => {
         // console.log(params[`id`]);
-        this.heroe = this.heroesService.getHeroe( params[`id`] );
+        this.hero = this.heroesService.getHero( params[`id`] );
       });
   }
 }

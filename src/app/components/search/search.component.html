@@ -1,0 +1,25 @@
+<h1>Search ... <small>"{{term}}"</small></h1>
+<hr>
+<div>
+  <div class="container" *ngIf="!heroes || heroes.length === 0">
+    <div class="row justify-content-center">
+      <img *ngIf="term.length>4" src="assets/img/marvel.png" [alt]="">
+      <img *ngIf="term.length<=4" src="assets/img/dc.png" [alt]="">
+    </div>
+    <div class="row justify-content-center">
+      <h1 class="font-weight-light">No match, please try again.</h1>
+    </div>
+  </div>
+  <div class="card-columns">
+<!--    <div class="card animated fadeIn fast" *ngFor="let hero of heroes">-->
+<!--      <img [src]="hero.img" class="card-img-top" [alt]="hero.img">-->
+<!--      <div class="card-body">-->
+<!--        <h5 class="card-title">{{hero.name}}</h5>-->
+<!--        <p class="card-text">{{hero.biog}}</p>-->
+<!--        <p class="card-text"><small class="text-muted">{{hero.add}}</small></p>-->
+<!--        <button type="button" class="btn btn-outline-primary btn-block">See more..</button>-->
+<!--      </div>-->
+<!--    </div>-->
+    <app-hero-card (selectedHero)="viewHero( $event )" [hero]="hero" [index]="hero.idx" *ngFor="let hero of heroes"></app-hero-card>
+  </div>
+</div>
