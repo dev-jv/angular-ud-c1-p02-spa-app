@@ -8,11 +8,11 @@
   <div class="col-md-8">
     <h3>{{hero.name}}</h3>
     <hr>
-    <p>{{hero.biog}}</p>
+    <p>{{hero.bio}}</p>
     <div class="d-flex justify-content-center">
       <img *ngIf="hero.home=='Marvel'" class="img-l" src="assets/img/marvel.png" [alt]="hero.home">
       <img *ngIf="hero.home=='DC'" class="img-l" src="assets/img/dc.png" [alt]="hero.home">
     </div>
-    <a [routerLink]="['/heroes']" class="btn btn-outline-info float-right">Return to</a>
+    <a [routerLink]="['/heroes']" class="btn btn-outline-info float-right">Back</a>
   </div>
 </div>
